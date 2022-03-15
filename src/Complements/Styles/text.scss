@@ -1,0 +1,22 @@
+$dark: #1e2244;
+$lightText: #E3DAC9;
+.dark-text {
+    color: $dark;
+    text-decoration: none;
+}
+
+.light-text {
+    color: $lightText;
+}
+
+.bold-text {
+    font-weight: 1000;
+}
+
+.big-text {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
