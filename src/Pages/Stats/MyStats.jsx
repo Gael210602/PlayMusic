@@ -16,7 +16,7 @@ ChartJS.register(
   Legend
 );
 
-export default class Stats extends Component{
+export default class MyStats extends Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -83,9 +83,7 @@ export default class Stats extends Component{
         <div class="row text-div">
           <div class="col-6">
             <h2>Promedio de victorias:</h2>
-            <div className='doughnut'>
-              <Doughnut data={contdata} />
-            </div>
+            <Doughnut data={contdata} />
           </div>
           <div class="col-6">
             <h2 className='dark-text'>Tiempos máximo y mínimo:</h2>
