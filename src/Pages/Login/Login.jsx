@@ -21,6 +21,9 @@ class Login extends Component {
     user[event.target.id] = event.target.value;
     this.setState({ user });
   }
+  componentDidMount (){
+    document.getElementsByClassName('navbar navbar-expand-lg')[0].remove()
+  }
 
   handleSubmit = () =>{
     let { user } = this.state;

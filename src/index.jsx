@@ -27,16 +27,21 @@ import './Complements/Styles/footer.scss';
 import Home from './Pages/Home/Home';
 import * as serviceWorker from './serviceWorker';
 import Index from './Pages/Index/Index';
+import Objectives from './Pages/Index/Sections/Objectives';
+import Context from './Pages/Index/Sections/Context';
+import Handbook from './Pages/Index/Sections/Handbook';
+import NavBar from './Components/Navbar/NavBar';
 
 function App() {
   return (
     <Provider store={store}>
+      <NavBar/>
       <Router>
         <Switch>
           <Route exact path="/" component={Index} />
-          <Route path="/objectives" component={Index} />
-          <Route path="/context" component={Index} />
-          <Route path="/handbook" component={Index} />
+          <Route path="/objectives" component={Objectives} />
+          <Route path="/context" component={Context} />
+          <Route path="/handbook" component={Handbook} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/home" component={Home} />

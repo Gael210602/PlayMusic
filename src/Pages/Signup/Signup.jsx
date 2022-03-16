@@ -70,7 +70,6 @@ class Signup extends Component {
     }
     return (
       <div>
-        <NavBar />
         <div className="row d-flex justify-content-center">
           <h1 className="dark-text text-center signup-title bold-text">¡Regístrate!</h1>
           <h5 className="dark-text text-center">Y lleva tu diversión al siguiente nivel</h5>
