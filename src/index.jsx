@@ -24,6 +24,7 @@ import './Complements/Styles/span.scss';
 import './Complements/Styles/button.scss';
 import './Complements/Styles/img.scss';
 import './Complements/Styles/footer.scss';
+import './Complements/Styles/gallery.scss';
 import Home from './Pages/Home/Home';
 import * as serviceWorker from './serviceWorker';
 import Index from './Pages/Index/Index';
@@ -31,7 +32,8 @@ import Objectives from './Pages/Index/Sections/Objectives';
 import Context from './Pages/Index/Sections/Context';
 import Handbook from './Pages/Index/Sections/Handbook';
 import NavBar from './Components/Navbar/NavBar';
-import Footer from './Components/Footer/Footer';
+import About from './Pages/Index/Sections/About';
+import Stats from './Pages/Stats/Stats';
 
 function App() {
   return (
@@ -43,14 +45,15 @@ function App() {
           <Route path="/objectives" component={Objectives} />
           <Route path="/context" component={Context} />
           <Route path="/handbook" component={Handbook} />
+          <Route path="/about" component={About} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/home" component={Home} />
+          <Route path="/stats" component={Stats} />
           <Route path="/ComponentTest" component={Home} />
           <Route component={NotFound} />
         </Switch>
       </Router>
-      <Footer />
     </Provider>
   );
 }
