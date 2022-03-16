@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Footer from '../../Components/Footer/Footer';
-import NavBar from '../../Components/Navbar/NavBar';
 import Main from './Sections/Main';
 
 export default class Index extends Component{
@@ -36,7 +35,6 @@ export default class Index extends Component{
         <br />
         <Main />
         </div>
-        <Footer />
       </body>
     );
   }

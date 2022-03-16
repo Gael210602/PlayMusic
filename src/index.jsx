@@ -31,6 +31,7 @@ import Objectives from './Pages/Index/Sections/Objectives';
 import Context from './Pages/Index/Sections/Context';
 import Handbook from './Pages/Index/Sections/Handbook';
 import NavBar from './Components/Navbar/NavBar';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           <Route component={NotFound} />
         </Switch>
       </Router>
+      <Footer />
     </Provider>
   );
 }
