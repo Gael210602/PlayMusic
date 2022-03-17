@@ -1,10 +1,6 @@
-import { Component, useState } from "react";
-import PhoneInput from "react-phone-input-2";
-import NavBar from "../../../Components/Navbar/NavBar";
+import { Component } from "react";
 import 'react-phone-input-2/lib/material.css'
-import { ValidatorForm } from 'react-material-ui-form-validator';
 import UsersService from'../../../Services/Users'
-import Swal from 'sweetalert2'
 import Input from "../../../Components/Input/Input";
 
 export default class Profile extends Component{
