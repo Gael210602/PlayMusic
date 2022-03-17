@@ -1,8 +1,6 @@
 import { Component } from 'react';
 import NavBar from '../../Components/Navbar/NavBar';
 import { ValidatorForm } from 'react-material-ui-form-validator';
-import ContainerList  from '../../Components/ContainerList/ContainerList'
-import Input from '../../Components/Input/Input';
 
 class Home extends Component {
   constructor(props) {
