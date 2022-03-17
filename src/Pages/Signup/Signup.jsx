@@ -18,7 +18,10 @@ class Signup extends Component {
         email:'',
         password:'',
         passwordconf:'',
-        checkbox: ''
+        checkbox: '',
+        username:'',
+        dob: '',
+        country:''
       }
     };
   }
@@ -87,6 +90,17 @@ class Signup extends Component {
                         </div>
                       </div>
                       <div className="row">
+                        <div className="col-4">
+                            <Input label='Nombre de usuario' name='username' value={this.state.user.username} onChange={this.handleChange} />
+                          </div>
+                          <div className="col-4">
+                            <Input label='Fecha de nacimiento' type='date' name='dob' value={this.state.user.dob} onChange={this.handleChange} required={true} />
+                          </div>
+                          <div className="col-4">
+                            <Input label='País' name='lastname' value={this.state.user.lastname} onChange={this.handleChange} required={true} />
+                          </div>
+                        </div>
+                        <div className="row">
                         <div className="col-6">
                           <Input label='Correo electrónico' name='email' type='email' value={this.state.user.email} onChange={this.handleChange} required={true} />
                         </div>
