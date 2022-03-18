@@ -38,7 +38,7 @@ export default class Objectives extends Component{
             <br />
             <br />
             <br />
-            <h1>Objetivo 1: ser feliz :)</h1>
+            <h1>Objetivo 1 </h1>
           </div>
           <div class="col-4">
             <br />
@@ -68,7 +68,7 @@ export default class Objectives extends Component{
             <br />
             <br />
             <br />
-            <h1>Objetivo 2: no sé que poner :)</h1>
+            <h1>Objetivo 2</h1>
           </div>
         </div>
         <br />
