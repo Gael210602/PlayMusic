@@ -5,6 +5,6 @@ FROM node:16-alpine as build
 WORKDIR /app/frontend
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm ci --silent
+RUN npm install --silent
 COPY ./ ./
 CMD ["yarn", "start"]
