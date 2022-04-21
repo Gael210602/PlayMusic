@@ -16,13 +16,17 @@ export default class Profile extends Component{
 
   loadData = () =>{
     let { user } = this.state;
-    UsersService.getUser().then(response => {
+    console.log(this.props.match.params.userId)
+    UsersService.getUser(this.props.match.params.userId).then(response => {
       console.log(response.data)
       if(response.status === 200){
-        console.log(response.data.user.email)
-        user['name'] = response.data.user.name;
-        user['lname'] = response.data.user.lastname;
-        user['email'] = response.data.user.email;
+        console.log(response.data.email)
+        user['name'] = response.data.name;
+        user['email'] = response.data.email;
+        user['user'] = response.data.user_name;
+        user['dob'] = response.data.dob;
+        user['country'] = response.data.country;
+        country
         this.setState({user})
       }else if(response.status === 401){
       }
@@ -32,7 +36,10 @@ export default class Profile extends Component{
     }
 
   render(){
+    if(this.state.user.name===undefined){
       this.loadData();
+    }
+
     return(
       <div className="row">
         <br />
@@ -53,13 +60,13 @@ export default class Profile extends Component{
                             <div className="col-4" style={{ paddingLeft:'2rem' }}>
                               <div className="form__group field">
                                 <input type="text" className="form__field" placeholder="Nombre" name="name" id="name" required value={this.state.user.name} onChange={this.handleChange} disabled />
-                                <label htmlFor="name" className="form__label">Nombre(s)</label>
+                                <label htmlFor="name" className="form__label">Nombre</label>
                               </div>
                             </div>
                             <div className="col-4" style={{ paddingLeft:'2rem' }}>
                               <div className="form__group field">
-                                <input type="text" className="form__field" placeholder="lname" name="lname" id="lname" required value={this.state.user.lname} onChange={this.handleChange} disabled />
-                                <label htmlFor="lname" className="form__label">Apellido(s)</label>
+                                <input type="text" className="form__field" placeholder="user" name="user" id="user" required value={this.state.user.user} onChange={this.handleChange} disabled />
+                                <label htmlFor="user" className="form__label">Usuario</label>
                               </div>
                             </div>
                             <div className="col-4" style={{ paddingLeft:'2rem' }}>
@@ -71,6 +78,21 @@ export default class Profile extends Component{
                           </div>
                           <br />
                           <br />
+                          <div className="row">
+                            <div className="col-6" style={{ paddingLeft:'2rem' }}>
+                              <div className="form__group field">
+                                <input type="date" className="form__field" placeholder="dob" name="dob" id="dob" required value={this.state.user.dob} onChange={this.handleChange} disabled />
+                                <label htmlFor="dob" className="form__label">Fecha de Nacimiento</label>
+                              </div>
+                            </div>
+                            <div className="col-6" style={{ paddingLeft:'2rem' }}>
+                              <div className="form__group field">
+                                <input type="text" className="form__field" placeholder="country" name="country" id="country" required value={this.state.user.country} onChange={this.handleChange} disabled />
+                                <label htmlFor="country" className="form__label">País</label>
+                              </div>
+                            </div>
+                          </div>
+                          <br /><br />
                           <div className="row text-center">
                             <h3>Cambiar contraseña</h3>
                           </div>

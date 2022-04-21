@@ -13,16 +13,13 @@ class Signup extends Component {
     this.state = {
       user:{
         name:'',
-        lastname:'',
-        phone:'',
+        user_name:'',
         email:'',
         password:'',
-        passwordconf:'',
-        checkbox: '',
-        username:'',
         dob: '',
-        country:''
-      }
+        country:'',
+        checkbox: ''
+      },
     };
   }
   handleChange = (event) =>{
@@ -33,20 +30,22 @@ class Signup extends Component {
   handleSubmit= () =>{
     var data = {
       ...this.state.user,
-      petition: 'USignup'
     }
-    if(this.state.user.password ==this.state.user.passwordconf){
+    if(this.state.user.checkbox==="true"){
+      console.log(data)
+      delete data.checkbox;
       UsersService.signupUser(data).then(response => {
-        if(response.status === 201){
+        if(response.status === 200){
             Swal.fire({
                 title: 'Registro exitoso!',
-                text: 'Revisa tu correo electr{onico para activar tu cuenta y terminar tu proceso',
+                text: 'Inicia sesión para continuar',
                 icon: 'success',
                 confirmButtonText: 'Aceptar'
             });
 
             setTimeout(() => { window.location.replace('http://localhost:3000/')}, 2000);
-        }else if(response.status === 401){
+        }else if(response.status === 204){
+          console.log(response)
             Swal.fire({
                 title: 'Error',
                 text: response.data.message,
@@ -57,7 +56,7 @@ class Signup extends Component {
       }).catch(e => {
           Swal.fire({
               title: 'Error',
-              text: 'ocurrió un error',
+              text: "Ocurrió un error",
               icon: 'error',
               confirmButtonText: 'Aceptar'
           });
@@ -82,22 +81,19 @@ class Signup extends Component {
                 <div className="card signup-card text-center">
                   <div className="card-body">
                       <div className="row">
-                        <div className="col-6">
-                          <Input label='Nombre(s)' name='name' value={this.state.user.name} onChange={this.handleChange} />
-                        </div>
-                        <div className="col-6">
-                          <Input label='Apellido(s)' name='lastname' value={this.state.user.lastname} onChange={this.handleChange} required={true} />
+                        <div className="col-12">
+                          <Input label='Nombre completo' name='name' value={this.state.user.name} onChange={this.handleChange} />
                         </div>
                       </div>
                       <div className="row">
                         <div className="col-4">
-                            <Input label='Nombre de usuario' name='username' value={this.state.user.username} onChange={this.handleChange} />
+                            <Input label='Nombre de usuario' name='user_name' value={this.state.user.user_name} onChange={this.handleChange} />
                           </div>
                           <div className="col-4">
                             <Input label='Fecha de nacimiento' type='date' name='dob' value={this.state.user.dob} onChange={this.handleChange} required={true} />
                           </div>
                           <div className="col-4">
-                            <Input label='País' name='lastname' value={this.state.user.lastname} onChange={this.handleChange} required={true} />
+                            <Input label='País' name='country' value={this.state.user.country} onChange={this.handleChange} required={true} />
                           </div>
                         </div>
                         <div className="row">

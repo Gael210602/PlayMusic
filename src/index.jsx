@@ -37,6 +37,7 @@ import About from './Pages/Index/Sections/About';
 import Stats from './Pages/Stats/Stats';
 import Profile from './Pages/Users/Profile/Profile';
 import MyStats from './Pages/Stats/MyStats';
+import UserList from './Pages/Users/List/UserList';
 
 function App() {
   return (
@@ -56,6 +57,8 @@ function App() {
           <Route path="/profile" component={Profile} />
           <Route path="/mystats" component={MyStats} />
           <Route path="/ComponentTest" component={Home} />
+          <Route exact path="/ListUsers" component={UserList} />
+          <Route exact path="/User/:userId" component={Profile} />
           <Route component={NotFound} />
         </Switch>
       </Router>

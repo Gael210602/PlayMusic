@@ -47,7 +47,7 @@ function NavBar() {
   var type = localStorage.getItem('type');
     if(type=== undefined || type===null){
       return (
-        <nav className="navbar navbar-expand-lg">
+        <nav className="navbar navbar-expand-lg" id='Navbar'>
           <a className="navbar-brand" href="/">
             <img src={Logo} alt="" height="50" className="d-inline-block align-top" style={{marginLeft:'1rem'}} />
           </a>

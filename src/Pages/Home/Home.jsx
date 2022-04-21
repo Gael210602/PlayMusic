@@ -21,7 +21,6 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <NavBar />
         <div className="row d-flex justify-content-center">
           <div className="col-12">
             <div style={{ height: '100%', width: '100%', padding: '2rem' }}>

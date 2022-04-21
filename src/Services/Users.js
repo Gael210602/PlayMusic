@@ -3,14 +3,14 @@ import http from "./http-common";
 class UsersService {
 
     signupUser(data) {
-        return http.post(`/Users`, data);
+        return http.post(`/users/`, data);
     }
 
     getUsers() {
-        return http.get(`/Users`);
+        return http.get(`/users/`);
     }
-    getUser() {
-        return http.get(`/User`);
+    getUser(pk) {
+        return http.get(`/user/${pk}/`);
     }
 }
 

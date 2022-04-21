@@ -11,7 +11,7 @@ class Login extends Component {
     super(props);
     this.state = {
       user:{
-        email:'',
+        user_name:'',
         password:''
       }
     };
@@ -22,13 +22,13 @@ class Login extends Component {
     this.setState({ user });
   }
   componentDidMount (){
-    document.getElementsByClassName('navbar navbar-expand-lg')[0].remove()
+    document.getElementById('Navbar').remove()
   }
 
   handleSubmit = () =>{
     let { user } = this.state;
         var userdata = {
-            email: user.email,
+          user_name: user.user_name,
             password: user.password,
         }
             LoginService.Login(userdata).then(response => {
@@ -39,7 +39,7 @@ class Login extends Component {
                         confirmButtonText: 'Aceptar'
                     });
                     localStorage.setItem('token', response.data.token)
-                    localStorage.setItem('user', userdata.email)
+                    localStorage.setItem('user_name', userdata.user_name)
                     window.location.reload()
                 }else if(response.status === 401){
                     Swal.fire({
@@ -84,7 +84,7 @@ class Login extends Component {
               <ValidatorForm
                 onError={errors => console.log(errors)}
                 onSubmit={this.handleSubmit}>
-                <Input label='Correo electrónico'  name='email' onChange={this.handleChange} type='email' value={this.state.user.email} required={true} />
+                <Input label='Correo electrónico'  name='user_name' onChange={this.handleChange} type='text' value={this.state.user.user_name} required={true} />
                 <br />
                 <Input label='Contraseña' name='password' type='password' value={this.state.user.password} onChange={this.handleChange} required={true} />
                 <br />

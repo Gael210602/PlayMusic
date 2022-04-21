@@ -3,7 +3,7 @@ import http from "./http-common";
 class LoginService {
 
     Login(data) {
-        return http.post(`/Login`, data);
+        return http.post(`/login/`, data);
     }
     Logout(data) {
         return http.post(`/Logout`, data);
