@@ -1,6 +1,6 @@
 # The first stage
 # Build React static files
-FROM node:13.12.0-alpine
+FROM node:17.9.0-alpine
 
 WORKDIR /app
 
