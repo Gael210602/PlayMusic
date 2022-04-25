@@ -8,7 +8,7 @@ COPY package.json ./
 COPY package-lock.json ./
 COPY ./ ./
 
-RUN npm i
+RUN npm install --silent
 
 
-CMD ["npm", "run", "start"]
+CMD ["yarn",  "start"]
