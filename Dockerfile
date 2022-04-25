@@ -11,4 +11,4 @@ COPY ./ ./
 RUN npm ci
 
 
-CMD ["yarn",  "start"]
+CMD ["npm","run",  "start"]
