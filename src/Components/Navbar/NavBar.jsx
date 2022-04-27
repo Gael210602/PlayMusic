@@ -9,7 +9,10 @@ import $ from 'jquery';
 import LoginService from '../../Services/Login'
 
 function logout(){
-  LoginService.Logout({}).then(response => {
+  var userdata = {
+    jwt: localStorage.getItem("token")
+  }
+  LoginService.Logout(userdata).then(response => {
     if(response.status === 201){
             Swal.fire({
                 title: 'Cierre de sesión exitoso',
