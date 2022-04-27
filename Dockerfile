@@ -1,14 +1,14 @@
 # The first stage
 # Build React static files
-FROM node:alpine
+FROM node:16-alpine as build
 
-WORKDIR /app
+WORKDIR /app/frontend
 
 COPY package.json ./
 COPY package-lock.json ./
 COPY ./ ./
 
-RUN npm ci
+RUN npm ci  --silent
 
 
-CMD ["npm","run",  "start"]
+CMD ["yarn",  "start"]
