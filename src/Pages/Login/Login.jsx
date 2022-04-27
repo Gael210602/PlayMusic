@@ -65,7 +65,7 @@ class Login extends Component {
     if(mytoken === undefined || mytoken === null){
         //pass
     }else{
-        window.location.replace('http://localhost:3000/Home')
+        window.location.replace('https://www.playmusic.com.mx/Home')
     }
     return (
       <div>
