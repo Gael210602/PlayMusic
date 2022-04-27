@@ -6,7 +6,7 @@ class LoginService {
         return http.post(`/login/`, data);
     }
     Logout(data) {
-        return http.post(`/Logout`, data);
+        return http.post(`/logout/`, data);
     }
 
     ValidateToken() {
