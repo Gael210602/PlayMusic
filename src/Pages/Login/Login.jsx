@@ -38,8 +38,9 @@ class Login extends Component {
                         icon: 'success',
                         confirmButtonText: 'Aceptar'
                     });
-                    localStorage.setItem('token', response.data.token)
+                    localStorage.setItem('token', response.data.jwt)
                     localStorage.setItem('user_name', userdata.user_name)
+                    localStorage.setItem('type', userdata.type)
                     window.location.reload()
                 }else if(response.status === 401){
                     Swal.fire({
