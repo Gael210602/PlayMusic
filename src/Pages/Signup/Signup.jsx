@@ -43,7 +43,11 @@ class Signup extends Component {
                 confirmButtonText: 'Aceptar'
             });
 
-            setTimeout(() => { window.location.replace('https://www.playmusic.com.mx/')}, 2000);
+            setTimeout(() => {
+              let url = location.href;
+              url.replaceAll("/signup", "");
+              window.location.replace(url);
+            }, 2000);
         }else if(response.status === 204){
           console.log(response)
             Swal.fire({
@@ -68,7 +72,11 @@ class Signup extends Component {
     if(mytoken === undefined || mytoken === null){
         //pass
     }else{
-        window.location.replace('https://www.playmusic.com.mx/Home')
+      let url = location.href;
+      url = url.replace("/signup", "");
+      console.log(url)
+      url = url+"/Home"
+      window.location.assign(url);
     }
     return (
       <div>

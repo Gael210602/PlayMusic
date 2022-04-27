@@ -40,7 +40,7 @@ class Login extends Component {
                     });
                     localStorage.setItem('token', response.data.jwt)
                     localStorage.setItem('user_name', userdata.user_name)
-                    localStorage.setItem('type', userdata.type)
+                    localStorage.setItem('type', response.data.user_type)
                     window.location.reload()
                 }else if(response.status === 401){
                     Swal.fire({
@@ -66,7 +66,11 @@ class Login extends Component {
     if(mytoken === undefined || mytoken === null){
         //pass
     }else{
-        window.location.replace('https://www.playmusic.com.mx/Home')
+        let url = location.href;
+        url = url.replace("/login", "");
+        console.log(url)
+        url = url+"/Home"
+        window.location.assign(url);
     }
     return (
       <div>

@@ -44,6 +44,7 @@ function logout(){
 
 function NavBar() {
 // eslint-disable-next-line
+console.log(localStorage.getItem('type'));
   var type = localStorage.getItem('type');
     if(type=== undefined || type===null){
       return (
@@ -156,7 +157,7 @@ function NavBar() {
               <a className="nav-link" href="/Profile">Mi perfil</a>
             </li>
             <li className="navbar-right">
-              <button className="nav-link light-text logout" style={{background:'none', textDecoration:'none', border:'none'}} type="button" onClick={logout}>Cerrar sesión</button>
+              <button className="nav-link" style={{background:'none', textDecoration:'none', border:'none'}} type="button" onClick={logout}>Cerrar sesión</button>
             </li>
             </ul>
           </div>
