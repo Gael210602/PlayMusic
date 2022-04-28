@@ -3,9 +3,10 @@ div {
 }
 
 #img-container {
-    background-image: url("../Images/volume.jpg");
+    background-image: url("../Images/Home.gif");
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
 }
 
 .text-div {

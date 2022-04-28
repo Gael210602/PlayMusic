@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 $dark: #230608;
 $lightText: #E3DAC9;
+$midLight: #7d161e;
 .dark-text {
     color: $dark;
     text-decoration: none;
@@ -18,5 +20,15 @@ $lightText: #E3DAC9;
 }
 
 p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+}
+
+.welcome-text {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 15rem;
+    color: $midLight;
+}
+
+.secondary-welcome {
+    margin-top: -3rem;
 }

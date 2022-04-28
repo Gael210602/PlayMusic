@@ -12,7 +12,8 @@ export default class Main extends Component{
       <Fragment>
       <div class="row text-center">
           <div class="col-12">
-            <h2 className='dark-text'>Sobre el proyecto</h2>
+            <br />
+            <h1 className='dark-text'>Sobre el proyecto</h1>
             <br/>
           </div>
       </div>
@@ -22,7 +23,9 @@ export default class Main extends Component{
           <br />
           <br />
           <br />
-          <p className='dark-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolorem incidunt molestiae amet tenetur, repellendus est ipsam aliquam esse illo illum provident. Accusamus perspiciatis ipsam id consequatur eligendi et dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolorem incidunt molestiae amet tenetur, repellendus est ipsam aliquam esse illo illum provident. Accusamus perspiciatis ipsam id consequatur eligendi et dignissimos.</p>
+          <p className='dark-text'>Play Music es un videojuego musical interactivo, enfocado en percusiones. En él, acompañarás a Tobby en su travesía para liberar a Melody City de la malvada SILENT Corporation, superando diferentes obstáculos musicales, ganando puntos y aprendiendo nuevas cosas en el camino…
+¿Qué estás esperando?  ¡Ven a jugar!
+</p>
         </div>
         <div class="col-4">
           <img src={disk} alt="" className='info-img' />
