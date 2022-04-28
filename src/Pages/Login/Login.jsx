@@ -41,6 +41,7 @@ class Login extends Component {
                     localStorage.setItem('token', response.data.jwt)
                     localStorage.setItem('user_name', userdata.user_name)
                     localStorage.setItem('type', response.data.user_type)
+                    localStorage.setItem('user_id', response.data.user_id)
                     window.location.reload()
                 }else if(response.status === 401){
                     Swal.fire({

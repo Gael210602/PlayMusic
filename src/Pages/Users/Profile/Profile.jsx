@@ -93,18 +93,9 @@ export default class Profile extends Component{
                             </div>
                           </div>
                           <br /><br />
-                          <div className="row text-center">
-                            <h3>Cambiar contraseña</h3>
-                          </div>
 
-                          <div className="row">
-                            <div className="col-6">
-                              <Input label='Contraseña Actual' name='password' type='password' value={this.state.user.password} onChange={this.handleChange} required={true} />
-                            </div>
-                            <div className="col-6">
-                              <Input label='Contraseña Nueva' name='password' type='password' value={this.state.user.password} onChange={this.handleChange} required={true} />
-                            </div>
-                          </div>
+
+
                         </div>
                     </div>
                 </div>
