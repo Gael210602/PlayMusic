@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL: "http://34.134.232.249/api/",
+    baseURL: "https://www.playmusic.com.mx/api",
     headers: {
         "Content-type": "application/json",
     }
