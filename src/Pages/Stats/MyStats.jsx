@@ -66,7 +66,7 @@ export default class MyStats extends Component{
             console.log(response['data'][index]['user_id'] )
             if(response['data'][index]['user_id'] === userId ){
               attlist.push(response['data'][index]);
-              labels.push(response['data'][index]['user_id']);
+              labels.push(index);
               score.push(response['data'][index]['score']);
             }
           }
@@ -91,7 +91,7 @@ export default class MyStats extends Component{
     const data = {
       labels,
       datasets: [{
-        label: 'Puntuajes',
+        label: 'Puntuaje',
         data: this.state.attempts.score,
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)'
