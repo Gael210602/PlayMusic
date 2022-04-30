@@ -63,7 +63,7 @@ export default class Stats extends Component{
           var score = [];
           var labels = [];
           for (let index = 0; index < response['data'].length; index++) {
-            console.log(response['data'][index]['user_id'] )
+              console.log(response['data'][index]['user_id'] )
               attlist.push(response['data'][index]);
               labels.push(index);
               score.push(response['data'][index]['score']);

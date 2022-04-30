@@ -5,7 +5,7 @@ class ScoresService {
     getScores(pk) {
         return http.get(`/gameVariable/${pk}/`);
     }
-    getAttempts(pk) {
+    getAttempts() {
         return http.get(`/attempts/`);
     }
 }
