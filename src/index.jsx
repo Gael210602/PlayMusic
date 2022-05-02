@@ -52,7 +52,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
-          <Route path="/home" component={Home} />
+          <Route path="/home" component={MyStats} />
           <Route path="/stats" component={Stats} />
           <Route path="/profile" component={Profile} />
           <Route path="/mystats" component={MyStats} />

@@ -20,7 +20,9 @@ function logout(){
                 confirmButtonText: 'Aceptar'
             });
             localStorage.clear();
+            window.location.assign("https://www.playmusic.com.mx/");
             window.location.reload()
+
         }else if(response.status === 401){
             Swal.fire({
                 title: 'Error',
@@ -29,7 +31,10 @@ function logout(){
                 confirmButtonText: 'Aceptar'
             });
             localStorage.clear();
-            window.location.reload()
+
+        window.location.assign("https://www.playmusic.com.mx/");
+        window.location.reload()
+
 
         }
     }).catch(e => {
@@ -41,6 +46,7 @@ function logout(){
             confirmButtonText: 'Aceptar'
         });
         localStorage.clear();
+        window.location.assign("https://www.playmusic.com.mx/");
         window.location.reload()
     });
 }
@@ -112,7 +118,7 @@ console.log(localStorage.getItem('type'));
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="nav navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/Home">Jugar</a>
+                <a className="nav-link" href="/Home">Descargar juego</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/mystats">Mis estadísticas</a>
@@ -146,7 +152,7 @@ console.log(localStorage.getItem('type'));
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="nav navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/Home">Jugar</a>
+                <a className="nav-link" href="/Home">Descargar juego</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/mystats">Mis estadísticas</a>

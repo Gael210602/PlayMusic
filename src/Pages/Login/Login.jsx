@@ -90,7 +90,7 @@ class Login extends Component {
               <ValidatorForm
                 onError={errors => console.log(errors)}
                 onSubmit={this.handleSubmit}>
-                <Input label='Correo electrónico'  name='user_name' onChange={this.handleChange} type='text' value={this.state.user.user_name} required={true} />
+                <Input label='Nombre de usuario'  name='user_name' onChange={this.handleChange} type='text' value={this.state.user.user_name} required={true} />
                 <br />
                 <Input label='Contraseña' name='password' type='password' value={this.state.user.password} onChange={this.handleChange} required={true} />
                 <br />

@@ -45,8 +45,10 @@ class Signup extends Component {
 
             setTimeout(() => {
               let url = location.href;
-              url.replaceAll("/signup", "");
-              window.location.replace(url);
+        url = url.replace("/login", "");
+        console.log(url)
+        url = url+"/Home"
+        window.location.assign(url);
             }, 2000);
         }else if(response.status === 204){
           console.log(response)
