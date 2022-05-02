@@ -31,6 +31,8 @@ export default class Stats extends Component{
           Hs2: 0,
           Hs3: 0,
           score:1,
+          maxtime: 0,
+          time: 0
         },
         attempts:{
           variable:0,
@@ -94,6 +96,31 @@ export default class Stats extends Component{
           console.log(e)
 
         });
+        ScoresService.getSessionTime().then(response => {
+          let { user } = this.state;
+          if(response.status === 200){
+            var userId = parseInt(localStorage.getItem("user_id"));
+            var time = 0;
+            var count = 0;
+            var maxtime = 0;
+            for (let index = 0; index < response['data'].length; index++) {
+              console.log(response['data'][index]['user_id'] )
+              time = response['data'][index]['time'] + time;
+              count = count+1;
+              if( maxtime < response['data'][index]['time'] ){
+                maxtime = response['data'][index]['time'];
+              }
+            }
+            user['maxtime'] = Math.floor(maxtime);
+            user['time'] = Math.floor(time / count ) ;
+            this.setState({user})
+            console.log(this.state)
+          }else if(response.status === 401){
+          }
+          }).catch(e => {
+            console.log(e)
+
+          });
     }
 
   render() {
@@ -138,15 +165,20 @@ export default class Stats extends Component{
         <br /><br />
         <div class="row text-div">
           <div class="col-6">
-            <h2 className='dark-text'>Tiempos máximo y mínimo:</h2>
-            <Line data={data} />
-
+            <h2 className='dark-text'>Tiempo máximo de sesión: {this.state.user.maxtime} segundos</h2>
           </div>
+          <div class="col-6">
+            <h2 className='dark-text'>Tiempo promedio de sesión: {this.state.user.time} segundos</h2>
+          </div>
+        </div>
+        <br /><br />
+        <div class="row text-div">
           <div class="col-6">
             <h2 className='dark-text'>Tiempos máximo y mínimo:</h2>
             <Line data={data} />
 
           </div>
+
         </div>
 
         <br />

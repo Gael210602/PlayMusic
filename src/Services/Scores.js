@@ -12,6 +12,9 @@ class ScoresService {
     getAttempts() {
         return http.get(`/attempts/`);
     }
+    getSessionTime() {
+        return http.get(`/sessionData/`);
+    }
 }
 
 export default new ScoresService();
