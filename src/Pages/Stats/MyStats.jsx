@@ -164,7 +164,6 @@ export default class MyStats extends Component{
         <br /> <br />
         <div class="row text-div">
           <div class="col-12">
-            <h2 className='dark-text'>Tiempos máximo y mínimo:</h2>
             <Line data={data} />
 
           </div>
