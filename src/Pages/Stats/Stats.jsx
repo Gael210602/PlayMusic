@@ -42,13 +42,28 @@ export default class Stats extends Component{
   }
 
   getStats(){
-    ScoresService.getScores(localStorage.getItem("user_id")).then(response => {
+    ScoresService.getGlobalScores().then(response => {
       if(response.status === 200){
         let { user } = this.state;
         user['score'] = 0;
-        user['Hs1'] = response['data']['Hs1'];
-        user['Hs2'] = response['data']['Hs2'];
-        user['Hs3'] = response['data']['Hs3'];
+        console.log(response['data'])
+        var Hs1 = 0;
+        var Hs2 = 0;
+        var Hs3 = 0;
+        for (let i = 0; i < response['data'].length; i++) {
+          if( Hs1 < response['data'][i]['Hs1']){
+            Hs1 = response['data'][i]['Hs1'];
+          }
+          if( Hs2 < response['data'][i]['Hs2']){
+            Hs1 = response['data'][i]['Hs2'];
+          }
+          if( Hs3 < response['data'][i]['Hs3']){
+            Hs3 = response['data'][i]['Hs3'];
+          }
+        }
+        user['Hs1'] = Hs1;
+        user['Hs2'] = Hs2;
+        user['Hs3'] = Hs3;
         this.setState({user})
       }else if(response.status === 401){
       }
@@ -122,7 +137,12 @@ export default class Stats extends Component{
         </div>
         <br /><br />
         <div class="row text-div">
-          <div class="col-12">
+          <div class="col-6">
+            <h2 className='dark-text'>Tiempos máximo y mínimo:</h2>
+            <Line data={data} />
+
+          </div>
+          <div class="col-6">
             <h2 className='dark-text'>Tiempos máximo y mínimo:</h2>
             <Line data={data} />
 

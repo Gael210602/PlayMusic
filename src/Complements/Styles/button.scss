@@ -13,3 +13,24 @@ $lightText: #E3DAC9;
         background-color: $midDark;
     }
 }
+
+.download {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 95%;
+    position: fixed;
+    text-align: center;
+}
+
+
+/* Darker background on mouse-over */
+
+.download:hover {
+    background-color: RoyalBlue;
+    color: white;
+}

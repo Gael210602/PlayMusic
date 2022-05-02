@@ -16,17 +16,16 @@ export default class Profile extends Component{
 
   loadData = () =>{
     let { user } = this.state;
-    console.log(this.props.match.params.userId)
-    UsersService.getUser(this.props.match.params.userId).then(response => {
+    UsersService.getUser(localStorage.getItem('user_id')).then(response => {
       console.log(response.data)
       if(response.status === 200){
-        console.log(response.data.email)
+        console.log(response.data)
         user['name'] = response.data.name;
         user['email'] = response.data.email;
         user['user'] = response.data.user_name;
         user['dob'] = response.data.dob;
         user['country'] = response.data.country;
-        country
+
         this.setState({user})
       }else if(response.status === 401){
       }

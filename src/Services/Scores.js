@@ -2,6 +2,10 @@ import http from "./http-common";
 
 class ScoresService {
 
+    getGlobalScores() {
+        return http.get(`/gameVariables/`);
+    }
+
     getScores(pk) {
         return http.get(`/gameVariable/${pk}/`);
     }

@@ -1,7 +1,7 @@
 import { Component, Fragment } from 'react';
-import inter from '../../../Complements/Images/inter.jpeg'
-import easy from '../../../Complements/Images/easy.jpeg'
-import hard from '../../../Complements/Images/hard.jpeg'
+import inter from '../../../Complements/Images/level2.jpeg'
+import easy from '../../../Complements/Images/level1.jpeg'
+import hard from '../../../Complements/Images/level3.jpeg'
 
 export default class Handbook extends Component{
   constructor(props) {
@@ -27,8 +27,10 @@ export default class Handbook extends Component{
             <br />
             <br />
             <br />
-            <br />
-            <p className='dark-text'>Dificultad: Fácil <br/> En esta modalidad, el usuario únicamente debe seguir un solo indicador (representado por los círculos amarillos), los cuales se desplazan de izquierda a derecha. El momento adecuado para seguir el patrón rítmico, es cuando el indicador se posiciona sobre la línea blanca. El jugador contará con cierto margen de error; no obstante, entre mayor precisión mayor será el puntaje que reciba. Cuenta con 3 corazones, las cuales representan gráficamente los intentos que tiene el usuario para equivocarse. Al seguir correctamente el ritmo, se irán acumulando puntos. Si se conserva una racha, el contador de puntos aumentará con mayor rapidez (esto aplica para las 3 dificultades).</p>
+            <p className='dark-text'>Dificultad: Fácil <br/>
+              En esta modalidad se despliega una sola nota posible, la cual es tocada con la barra espaciadora (spacebar). Se espera que el usuario presione la barra espaciadora en el momento indicado, es decir, cuando la nota pase encima del indicador estático.
+              Como se puede apreciar, hay 3 vidas disponibles, las cuales se pierden cada que el usuario cometa un error. Si se consigue una racha, el puntaje aumentará exponencialmente (este punto aplica para las 3 dificultades).
+            </p>
           </div>
         </div>
         <br />
@@ -38,7 +40,10 @@ export default class Handbook extends Component{
             <br />
             <br />
             <br />
-            <p className='dark-text'>Dificultad: Intermedia <br/> Para este modo, se aumenta el número de elementos que pueden ser utilizados para el patrón rítmico y cuenta también con los 3 corazones para mostrar los intentos restantes. Al presionar una tecla incorrecta o fuera del margen del tiempo, el usuario perderá medio corazón.</p>
+            <p className='dark-text'>Dificultad: Intermedia <br/>
+              Esta segunda opción del videojuego contempla 4 notas musicales, las cuales son tocadas por las flechas de tu ordenador y, de manera similar al nivel fácil, el jugador debe presionar las teclas en el momento indicado. Sin embargo, se agregan obstáculos, los cuales si los presionas te restan vidas.
+              Debido a que es una dificultad mayor, se otorgan más vidas al jugador.
+            </p>
           </div>
           <div class="col-4">
             <img src={inter} alt="" className='info-img' />
@@ -54,7 +59,10 @@ export default class Handbook extends Component{
             <br />
             <br />
             <br />
-            <p className='dark-text'>Dificultad: Difícil <br /> Este tipo de niveles presentan una mecánica similar a la anterior, añadiendo elementos de distracción, los cuales si se presionan, se le restará un corazón completo al jugador. De igual forma, la velocidad será mayor con respecto a los anteriores. Se aplican las mismas reglas que en la modalidad anterior con relación a las teclas incorrectas o fuera del margen del tiempo.</p>
+            <p className='dark-text'>Dificultad: Difícil <br />
+              La tercera dificultad representa el último nivel del videojuego, y por lo mismo, es el más complejo. En este nivel nuevamente tenemos la participación de 4 notas diferentes (flechas de tu teclado) y los obstáculos, sin embargo, este nivel implica mayor velocidad de reacción e incluso, se espera que el usuario pueda presionar 2 teclas simultáneamente en diversas ocasiones.
+              Siendo la dificultad más compleja, se añaden más vidas al jugador.
+            </p>
           </div>
         </div>
         <br />

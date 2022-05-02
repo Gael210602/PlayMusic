@@ -26,7 +26,6 @@ import './Complements/Styles/img.scss';
 import './Complements/Styles/footer.scss';
 import './Complements/Styles/gallery.scss';
 import './Complements/Styles/Charts.scss';
-import Home from './Pages/Home/Home';
 import * as serviceWorker from './serviceWorker';
 import Index from './Pages/Index/Index';
 import Objectives from './Pages/Index/Sections/Objectives';
@@ -38,6 +37,7 @@ import Stats from './Pages/Stats/Stats';
 import Profile from './Pages/Users/Profile/Profile';
 import MyStats from './Pages/Stats/MyStats';
 import UserList from './Pages/Users/List/UserList';
+import Download from './Pages/Download/Download';
 
 function App() {
   return (
@@ -52,11 +52,11 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
-          <Route path="/home" component={MyStats} />
+          <Route path="/home" component={Download} />
+          <Route path="/download" component={Download} />
           <Route path="/stats" component={Stats} />
           <Route path="/profile" component={Profile} />
           <Route path="/mystats" component={MyStats} />
-          <Route path="/ComponentTest" component={Home} />
           <Route exact path="/ListUsers" component={UserList} />
           <Route exact path="/User/:userId" component={Profile} />
           <Route component={NotFound} />

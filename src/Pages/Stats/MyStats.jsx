@@ -107,7 +107,7 @@ export default class MyStats extends Component{
         <div class="row text-center">
           <div class="col-12">
             <br/>
-            <h1 className='dark-text'>Nuestras Estadísticas</h1>
+            <h1 className='dark-text'>Mis Estadísticas</h1>
           </div>
         </div>
         <br />

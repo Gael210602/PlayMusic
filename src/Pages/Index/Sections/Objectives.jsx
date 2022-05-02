@@ -28,7 +28,7 @@ export default class Objectives extends Component{
             <br />
             <br />
             <br />
-            <p className='dark-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta accusamus itaque possimus et deserunt atque soluta aut. Pariatur dolorum rerum atque assumenda animi harum! Veniam qui sint dolores eligendi soluta?</p>
+            <p className='dark-text'>La travesía de salvar al pueblo de Melody City de la malvada SILENT Corporation no es una tarea sencilla, sin embargo, este viaje está lleno de momentos de aprendizaje y diversión. En Play Music buscamos que…</p>
           </div>
         </div>
         <br />
@@ -38,14 +38,14 @@ export default class Objectives extends Component{
             <br />
             <br />
             <br />
-            <h1>Objetivo 1 </h1>
+            <h1>Aproveches al máximo el uso de las tecnologías.</h1>
           </div>
           <div class="col-4">
             <br />
             <br />
             <br />
             <br />
-            <p className='dark-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta accusamus itaque possimus et deserunt atque soluta aut. Pariatur dolorum rerum atque assumenda animi harum! Veniam qui sint dolores eligendi soluta?</p>
+            <p className='dark-text'>Hoy en día, la tecnología está inmersa en todas las actividades que realizamos, por ello, es importante hacer buen uso de la misma y aprovechar los beneficios que nos brinda.</p>
           </div>
           <div class="col-4">
             <img src={disk} alt="" className='info-img' />
@@ -61,14 +61,14 @@ export default class Objectives extends Component{
             <br />
             <br />
             <br />
-            <p className='dark-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta accusamus itaque possimus et deserunt atque soluta aut. Pariatur dolorum rerum atque assumenda animi harum! Veniam qui sint dolores eligendi soluta?</p>
+            <p className='dark-text'> El jugar los diferentes niveles que Play Music tiene te permitirán adquirir mayor agilidad con el teclado y, además, podrás identificar las aportaciones de diferentes instrumentos de percusión en obras musicales. ¡La práctica hace al maestro!</p>
           </div>
           <div class="col-4">
             <br />
             <br />
             <br />
             <br />
-            <h1>Objetivo 2</h1>
+            <h1>Mejores tu velocidad y tiempos rítmicos.</h1>
           </div>
         </div>
         <br />

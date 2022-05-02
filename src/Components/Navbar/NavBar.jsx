@@ -20,7 +20,7 @@ function logout(){
                 confirmButtonText: 'Aceptar'
             });
             localStorage.clear();
-            window.location.assign("https://www.playmusic.com.mx/");
+            window.location.href = "https://www.playmusic.com.mx/";
             window.location.reload()
 
         }else if(response.status === 401){
@@ -32,7 +32,7 @@ function logout(){
             });
             localStorage.clear();
 
-        window.location.assign("https://www.playmusic.com.mx/");
+        window.location.href = "https://www.playmusic.com.mx/";
         window.location.reload()
 
 
@@ -46,7 +46,7 @@ function logout(){
             confirmButtonText: 'Aceptar'
         });
         localStorage.clear();
-        window.location.assign("https://www.playmusic.com.mx/");
+        window.location.href = "https://www.playmusic.com.mx/";
         window.location.reload()
     });
 }
