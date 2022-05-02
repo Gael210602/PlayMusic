@@ -14,7 +14,7 @@ $lightText: #E3DAC9;
     }
 }
 
-.download {
+.download-handbook {
     background-color: DodgerBlue;
     border: none;
     color: white;
@@ -23,6 +23,18 @@ $lightText: #E3DAC9;
     font-size: 20px;
     border-radius: 10px;
     width: 95%;
+    text-align: center;
+}
+
+.download {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 100%;
     position: fixed;
     text-align: center;
 }
@@ -31,6 +43,11 @@ $lightText: #E3DAC9;
 /* Darker background on mouse-over */
 
 .download:hover {
+    background-color: RoyalBlue;
+    color: white;
+}
+
+.download-handbook:hover {
     background-color: RoyalBlue;
     color: white;
 }
