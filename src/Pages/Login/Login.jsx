@@ -69,7 +69,6 @@ class Login extends Component {
     }else{
         let url = location.href;
         url = url.replace("/login", "");
-        console.log(url)
         url = url+"/Home"
         window.location.assign(url);
     }

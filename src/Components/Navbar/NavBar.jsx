@@ -20,8 +20,7 @@ function logout(){
                 confirmButtonText: 'Aceptar'
             });
             localStorage.clear();
-            window.location.href = "https://www.playmusic.com.mx/";
-            window.location.reload()
+            window.location.replace("https://www.playmusic.com.mx");
 
         }else if(response.status === 401){
             Swal.fire({
@@ -31,14 +30,12 @@ function logout(){
                 confirmButtonText: 'Aceptar'
             });
             localStorage.clear();
+            window.location.replace("https://www.playmusic.com.mx");
 
-        window.location.href = "https://www.playmusic.com.mx/";
-        window.location.reload()
 
 
         }
     }).catch(e => {
-        console.log(e)
         Swal.fire({
             title: 'Error',
             text: 'Verifica tus credenciales',
@@ -46,14 +43,12 @@ function logout(){
             confirmButtonText: 'Aceptar'
         });
         localStorage.clear();
-        window.location.href = "https://www.playmusic.com.mx/";
-        window.location.reload()
+        window.location.replace("https://www.playmusic.com.mx");
     });
 }
 
 function NavBar() {
 // eslint-disable-next-line
-console.log(localStorage.getItem('type'));
   var type = localStorage.getItem('type');
     if(type=== undefined || type===null){
       return (
@@ -87,6 +82,9 @@ console.log(localStorage.getItem('type'));
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/stats">Estadísticas</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/api">Documentación de API</a>
               </li>
             </ul>
             <ul className="navbar-nav ml-auto flex-grow-1 text-right justify-content-end">

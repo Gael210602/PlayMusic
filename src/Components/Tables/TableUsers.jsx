@@ -1,7 +1,6 @@
 import React from "react";
 
 const TableUsers = (props) => {
-  console.log(props)
   return (
       props.users.map((val, idx)=> {
           return (

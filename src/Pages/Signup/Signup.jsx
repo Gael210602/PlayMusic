@@ -32,7 +32,6 @@ class Signup extends Component {
       ...this.state.user,
     }
     if(this.state.user.checkbox==="true"){
-      console.log(data)
       delete data.checkbox;
       UsersService.signupUser(data).then(response => {
         if(response.status === 200){
@@ -46,12 +45,10 @@ class Signup extends Component {
             setTimeout(() => {
               let url = location.href;
         url = url.replace("/login", "");
-        console.log(url)
         url = url+"/Home"
         window.location.assign(url);
             }, 2000);
         }else if(response.status === 204){
-          console.log(response)
             Swal.fire({
                 title: 'Error',
                 text: response.data.message,
@@ -76,7 +73,6 @@ class Signup extends Component {
     }else{
       let url = location.href;
       url = url.replace("/signup", "");
-      console.log(url)
       url = url+"/Home"
       window.location.assign(url);
     }

@@ -65,7 +65,6 @@ export default class MyStats extends Component{
           var score = [];
           var labels = [];
           for (let index = 0; index < response['data'].length; index++) {
-            console.log(response['data'][index]['user_id'] )
             if(response['data'][index]['user_id'] === userId ){
               attlist.push(response['data'][index]);
               labels.push(index);
@@ -76,7 +75,6 @@ export default class MyStats extends Component{
           attempts['labels'] = labels;
           attempts['score'] = score;
           this.setState({attempts})
-          console.log(this.state)
         }else if(response.status === 401){
         }
         }).catch(e => {
@@ -91,7 +89,6 @@ export default class MyStats extends Component{
             var count = 0;
             var maxtime = 0;
             for (let index = 0; index < response['data'].length; index++) {
-              console.log(response['data'][index]['user_id'] )
               if(response['data'][index]['user_id'] === userId ){
                 time = response['data'][index]['time'] + time;
                 count = count+1;
@@ -104,7 +101,6 @@ export default class MyStats extends Component{
             user['maxtime'] = Math.floor(maxtime);
             user['time'] = Math.floor(time / count ) ;
             this.setState({user})
-            console.log(this.state)
           }else if(response.status === 401){
           }
           }).catch(e => {
@@ -114,6 +110,10 @@ export default class MyStats extends Component{
       }
 
   render() {
+    const mytoken = localStorage.getItem('token');
+    if(mytoken === undefined || mytoken === null){
+        window.location.replace("https://www.playmusic.com.mx");
+    }
     if(this.state.user.score===1){
       this.getStats();
     }
